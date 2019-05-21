@@ -3,7 +3,9 @@ Uses a fully convolutional end-to-end speech enhancement system.
 
 Implemetation details of the paper accepted to ICASSP-2019
 
-**Deepak Baby and Sarah Verhulst, _SERGAN: Speech enhancement using relativistic generative adversarial networks with gradient penalty_, IEEE-ICASSP, May 2019, Brighton, UK.**
+**Deepak Baby and Sarah Verhulst, _SERGAN: Speech enhancement using relativistic generative adversarial networks with gradient penalty_, IEEE-ICASSP, pp. 106-110, May 2019, Brighton, UK.**
+
+> This work was funded with support from the EU Horizon 2020 programme under grant agreement No 678120 (RobSpear).
 
 __!!! Under Construction !!!__
 
@@ -32,7 +34,7 @@ __!!! Under Construction !!!__
 
 ----
 ### Misc
-* **This code loads all the data into memory for speeding up training**. But if you dont have enough memory, it is possible  to read the mini-batches from the disk using HDF5 read. In ```run_segan.py``` 
+* **This code loads all the data into memory for speeding up training**. But if you dont have enough memory, it is possible  to read the mini-batches from the disk using HDF5 read. In ```run_<xxx>.py``` 
   ```python
   clean_train_data = np.array(fclean['feat_data'])
   noisy_train_data = np.array(fnoisy['feat_data'])
@@ -42,7 +44,7 @@ __!!! Under Construction !!!__
   clean_train_data = fclean['feat_data']
   noisy_train_data = fnoisy['feat_data']
   ```
-  **But this can lead to a slow-down of about 20 times (on the test machine)** as the mini-batches are to be read from the     disk over several epochs.
+  **But this can lead to a slow-down of about 20 times (on the test machine)** as the mini-batches are to be read from the disk over several epochs.
 
 ---- 
 ### References
